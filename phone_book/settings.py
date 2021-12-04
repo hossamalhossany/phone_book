@@ -74,13 +74,28 @@ WSGI_APPLICATION = 'phone_book.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# hossam here put # at database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+# hossam put new configure for mariadb
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'phonebook',
+        'USER': 'root',
+        'PASSWORD': '3',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
+
+
 
 
 # Password validation
