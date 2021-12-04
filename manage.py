@@ -6,6 +6,7 @@ import sys
 # hossam add this line from home
 # hossam test commint 7
 
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'phone_book.settings')
