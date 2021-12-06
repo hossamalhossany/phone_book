@@ -7,6 +7,12 @@ def index(request):
 
 def return_value(request):
     with connection.cursor() as cursor:
+        sql =('''
+            insert into phonebook.ph_book_test1 (first_name, last_name) VALUES 
+            ("ahmed","ali")
+        ''')
+        cursor.execute(sql)
+
         sql = ('''
             select * from phonebook.ph_book_test1
         ''')
