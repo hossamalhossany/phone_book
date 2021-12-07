@@ -1,13 +1,16 @@
 # from django.shortcuts import render
 from django.http import HttpResponse
 from django.db import connection
+
+
 def index(request):
     return_value(request)
     return HttpResponse(return_value(request))
 
+
 def return_value(request):
     with connection.cursor() as cursor:
-        sql =('''
+        sql = ('''
             insert into phonebook.ph_book_test1 (first_name, last_name) VALUES 
             ("ahmed","ali")
         ''')
