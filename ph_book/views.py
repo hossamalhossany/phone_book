@@ -1,10 +1,14 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
-from django.db import connection
+from django.shortcuts import render
+
+
+# from django.http import HttpResponse
+# from django.db import connection
 
 
 def index(request):
-    return HttpResponse("ph_book/index.html")
+    html_page = "ph_book/index.html"
+    return render(request, html_page, {})
+    # return HttpResponse("ph_book/index.html")
 #     return_value(request)
 #     return HttpResponse(return_value(request))
 #
