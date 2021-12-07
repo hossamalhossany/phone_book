@@ -1,9 +1,6 @@
 from django.shortcuts import render
-
-
 # from django.http import HttpResponse
 # from django.db import connection
-
 
 def index(request):
     html_page = "ph_book/index.html"
