@@ -2,9 +2,12 @@ from django.shortcuts import render
 # from django.http import HttpResponse
 # from django.db import connection
 
+from .forms import contact_form
+
+
 def index(request):
     html_page = "ph_book/index.html"
-    return render(request, html_page, {})
+    return render(request, html_page, {contact_form})
     # return HttpResponse("ph_book/index.html")
 #     return_value(request)
 #     return HttpResponse(return_value(request))
