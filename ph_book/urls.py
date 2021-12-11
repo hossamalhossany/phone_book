@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name='index'),
-    path("put_data_to_databasa", views.put_data_to_databasa, name='put_data_to_databasa')
+    path("put_data_to_databasa", views.put_data_to_databasa,name='put_data_to_databasa')
 ]
 
 
