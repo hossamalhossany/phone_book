@@ -13,6 +13,7 @@ def index(request):
 
 
 def put_data_to_databasa(request):
+    # if request = POST:
     test = test1()
     test.first_name = request.POST.get('first_name')
     test.last_name = request.POST.get('last_name')
@@ -24,7 +25,23 @@ def put_data_to_databasa(request):
         ''')
         cursor.execute(sql)
         rows = cursor.fetchall()
-    return rows
+
+    html_page = "ph_book/index.html"
+    return render(request, html_page, {'rows': rows})
+    # return request(request, html_page, {'rows': rows})
+
+    # messages.add_message(request, messages.INFO,'ok')
+
+    # messages.success(request, "Data Saved")
+    # return HttpResponse(request)
+
+    # with connection.cursor() as cursor:
+    #     sql = ('''
+    #                 select * from phonebook.ph_book_test1
+    #     ''')
+    #     cursor.execute(sql)
+    #     rows = cursor.fetchall()
+    # return rows
 
     # return render(request,'')
     # first_name = request.GET['first_name']
