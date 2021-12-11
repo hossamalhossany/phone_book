@@ -5,33 +5,12 @@
     <title>Hossam Project</title>
 </head>
 <body><h1 >Hi this first page at my project</h1>
-**********************
-
-
-<form method="post">
-{#    <label for="f_name">First Name</label>#}
-{#    <input type="text" id="f_name" name="f_name"><br><br>#}
-{##}
-{#    <label for="s_name">Second Name</label>#}
-{#    <input type="text" id="s_name" name="s_name"><br><br>#}
-{#    <input type="submit">#}
-{#    hossam 11-12-2021 #}
-{#    {% for i in contact_form %}#}
-{#    {{ contact_form.index }}#}
-    <b><h1>
-{#    {{ contact_form.as_p }}#}
-        <label>first name </label>
-        {{ contact_form.first_name }}
-        <br>
-        <label> second name </label>
-        {{ contact_form.second_name }}
-        <br>
-        <input type="submit" value="save" >
-    </h1></b>
-
-</form>
-
-
-
+    **********************
+    <form method="post">
+        <h1>
+            {{ contact_form.as_p }}
+            <input type="submit" value="save" >
+        </h1>
+    </form>
 </body>
 </html>
