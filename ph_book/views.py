@@ -2,6 +2,7 @@ from django.db import connection
 from django.shortcuts import render
 from .forms import contact_form
 from .models import test1
+# this 14-12-2021 test for godaddy
 def index(request):
     html_page = "ph_book/index.html"
     return render(request, html_page, {'contact_form': contact_form})
